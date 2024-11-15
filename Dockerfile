@@ -199,6 +199,7 @@ USER $APP_USER
 
 # Ruby gems
 ENV RUBY_YJIT_ENABLE=1
+ENV RAILS_ENV=development
 
 RUN gem update --system \
     && bundle config set --local path vendor/bundle \

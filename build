@@ -6,7 +6,7 @@ if [[ -z $AWS_ACCOUNT_ID ]]; then
     exit 1
 fi
 
-docker build \
+docker buildx build \
     --platform linux/amd64 \
     --build-arg AWS_ACCOUNT_ID="$AWS_ACCOUNT_ID" \
     -t sass-embedded:latest .
