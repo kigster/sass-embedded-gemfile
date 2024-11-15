@@ -33,15 +33,19 @@ During the building of another project with this gem as a dependency for `dartsa
 342.3       sass-embedded
 ```
 
-The error is valid: this gem is not available with the suffix `x86_64-linux`, however it is available with the suffix `x86_64-linux-gnu` (and a few additional Linux options). 
- 
-# How to build
+The error is valid: this gem is not available with the suffix `x86_64-linux`, however it is available with the suffix `x86_64-linux-gnu` (and a few additional Linux options).
+
+# How to Build
 
 This repo can be built by running:
 
 ```bash
 ./build
 ```
+
+You should see something like this:
+
+![build](docker-build.png)
 
 And if the build is successful,
 
