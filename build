@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 # vim: ft=sh
 
+if [[ -z $AWS_ACCOUNT_ID ]]; then
+    echo "Please set AWS_ACCOUNT_ID variable."
+    exit 1
+fi
+
 docker build \
     --platform linux/amd64 \
+    --build-arg AWS_ACCOUNT_ID="$AWS_ACCOUNT_ID" \
     -t sass-embedded:latest .

@@ -1,4 +1,6 @@
-FROM ubuntu:18.04
+ARG AWS_ACCOUNT_ID
+
+FROM "${AWS_ACCOUNT_ID:-000}".dkr.ecr.us-east-1.amazonaws.com/ecr-public/ubuntu/ubuntu:18.04
 
 SHELL ["/bin/bash", "-c"]
 
